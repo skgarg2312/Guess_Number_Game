@@ -3,7 +3,7 @@ body{
 }
 
 .main{
-    background: url();
+    /* background: url(); */
     height: 100vh;
     width: 100%;
     display: flex;
@@ -16,6 +16,10 @@ body{
     top: -120px;
     object-fit: cover;
     z-index: -1;
+}
+
+.main #backvideo2{
+    display: none;
 }
 
 .container{
@@ -45,11 +49,16 @@ body{
     text-align: center;
     width: 70%;
     height: 30px;
-    font-size: 18px;
+    font-size: 16px;
+    box-sizing: border-box;
 }
 .container p{
     text-align: justify;
     margin: 15px;
+}
+
+#play{
+    margin-top: 80px;
 }
 
 #result{
@@ -61,4 +70,38 @@ body{
 #help{
     color: red;
     font-size: 14px;
+}
+
+button:hover{
+    background-color: rgba(95, 253, 201, 0.603);
+    border: 2px solid black;
+}
+
+@media screen and (max-width:720px){
+    .main{
+        background-color: rgba(34, 36, 35, 0.445);
+    }
+
+    .main #backvideo1{
+        display: none;
+    }
+    .main #backvideo2{
+        display:block;
+        position: fixed;
+        object-fit:cover;
+        height:100%;
+        z-index: 0;
+        top: 0px;
+    }
+
+    .container{
+        top: 80px;
+        width: 80%;
+        right: 35px;
+        background-color: rgba(253, 253, 253, 0.7);
+    }
+
+    button:hover{
+        background-color: rgba(255, 255, 0, 0.5);
+    }
 }
