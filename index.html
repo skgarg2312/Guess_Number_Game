@@ -8,8 +8,11 @@
 </head>
 <body>
     <div class="main">
-        <video id="backvideo" autoplay muted loop width="100%">
-            <source src="1478-147538078.mp4">
+        <video id="backvideo1" autoplay muted loop width="100%">
+            <source src="Object/1478-147538078.mp4">
+        </video>
+        <video id="backvideo2" autoplay muted loop width="100%">
+            <source src="Object/113241-697788627.mp4">
         </video>
         <div class="container">
             <h2>Let's play a game</h2>
@@ -21,14 +24,16 @@
 
             <center><input type="text" id="input_number" style="display:none" placeholder="Enter the number"></center>
             <center><button onclick="confirm()" id="confirm" style="display: none;">Confirm the number</button></center>
-
+            
             <p id="result"></p>
             <p id="help"></p>
+            
+            <center><button onclick="exit()" id="exit" style="display: none;">Exit</button></center>
+            
 
         </div>
     </div>
     
 </body>
 <script src="script.js"></script>
-
 </html>
