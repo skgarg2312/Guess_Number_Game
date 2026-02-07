@@ -1,11 +1,25 @@
-const video = document.getElementById("backvideo");
-video.playbackRate = 0.3 ; 
+const video1 = document.getElementById("backvideo1");
+video1.playbackRate = 0.3 ; 
+const video2 = document.getElementById("backvideo2");
+video2.playbackRate = 0.3 ; 
+
+function home(){
+    document.getElementById("play").style.display="block";
+    document.getElementById("start").style.display="none";
+    document.getElementById("input_number").style.display="none";
+    document.getElementById("confirm").style.display="none";
+    document.getElementById("exit").style.display="none";
+    document.getElementById("description").innerHTML = "";
+    document.getElementById("result").innerHTML = "";
+    document.getElementById("help").innerHTML = ""
+    restart()
+}
 
 function play(){
         document.getElementById("description").innerHTML = "I am thinking the number and you suggest me that number. <br> Number is between 0-100 ."
         document.getElementById("start").style.display="block";
         document.getElementById("play").style.display="none";
-        
+        document.getElementById("exit").style.display="block";
     }
 
 let number 
@@ -36,6 +50,7 @@ function confirm(){
                 // document.getElementById("result").innerHTML = "congratulation";
                 // document.getElementById("result").innerHTML = "Congratulation , You guess the another number , You are genius";
                 alert("Congratulation , You guess the correct number , You are genius")
+                document.getElementById("result").innerHTML = "Restart the game"
                 document.getElementById("help").innerHTML = ""
                 restart()
             }else{
@@ -75,3 +90,7 @@ function confirm(){
         }
             
     }
+
+function exit(){
+    home()
+}
